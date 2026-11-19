@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thermomix Rice &amp; Varoma Lookup Sheet</title>
+<meta name="description" content="Sortable, filterable lookup tables for cooking rice in the Thermomix: methods, rice types, TM5/TM6/TM7 differences, main-dish pairing, troubleshooting and rice storage rules.">
+<style>
+  :root{--bg:#faf8f5;--card:#fff;--ink:#222;--mute:#666;--line:#e2ddd5;--accent:#b4491f;--ok:#2f7d4f;--warn:#9a6b00;--tag:#f3ece4}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  header,main,footer{max-width:1100px;margin:0 auto;padding:0 16px}
+  header{padding-top:28px}
+  h1{margin:0 0 4px;font-size:1.7rem}
+  h2{margin:36px 0 8px;font-size:1.2rem;border-bottom:2px solid var(--accent);padding-bottom:4px}
+  .sub{color:var(--mute);margin:0}
+  nav{margin:14px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+  nav a{background:var(--tag);color:var(--ink);text-decoration:none;padding:4px 10px;border-radius:14px;font-size:.85rem}
+  nav a:hover{background:var(--accent);color:#fff}
+  .quick{background:#fff6ec;border-left:5px solid var(--accent);padding:12px 16px;margin-top:20px;border-radius:4px}
+  .quick h2{margin:0 0 6px;border:0;font-size:1.05rem}
+  .quick ul{margin:0;padding-left:20px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:14px 0}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:10px 12px}
+  .stat b{display:block;font-size:1.35rem;color:var(--accent)}
+  .stat span{color:var(--mute);font-size:.82rem}
+  .tools{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+  input[type=search],select{padding:6px 10px;border:1px solid var(--line);border-radius:6px;font:inherit;background:#fff}
+  input[type=search]{min-width:240px}
+  .wrap{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--card)}
+  table{border-collapse:collapse;width:100%;min-width:720px}
+  th,td{padding:8px 10px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+  th{background:var(--tag);cursor:pointer;white-space:nowrap;user-select:none;position:sticky;top:0}
+  th:after{content:" \2195";color:#aaa;font-size:.75rem}
+  th.asc:after{content:" \2191";color:var(--accent)}
+  th.desc:after{content:" \2193";color:var(--accent)}
+  tr:last-child td{border-bottom:0}
+  .pill{display:inline-block;padding:1px 8px;border-radius:10px;font-size:.78rem;white-space:nowrap}
+  .doc{background:#e3f3e9;color:var(--ok)}
+  .test{background:#fff1d1;color:var(--warn)}
+  .no{background:#eee;color:#555}
+  .note{color:var(--mute);font-size:.85rem;margin:6px 0 0}
+  .count{color:var(--mute);font-size:.85rem;align-self:center}
+  footer{padding:30px 16px 40px;color:var(--mute);font-size:.85rem}
+  @media print{nav,.tools{display:none}body{background:#fff}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Thermomix Rice &amp; Varoma Lookup Sheet</h1>
+  <p class="sub">Sort and filter reference tables for rice methods, rice types, models, main-dish pairing, fixes and storage. Last checked: November 2026.</p>
+  <nav>
+    <a href="#limits">Key limits</a><a href="#methods">Methods</a><a href="#rice">Rice types</a><a href="#models">Models</a><a href="#pairing">Rice + main</a><a href="#fixes">Troubleshooting</a><a href="#storage">Storage</a><a href="#faq">FAQ</a>
+  </nav>
+  <div class="quick">
+    <h2>Quick Reference</h2>
+    <ul>
+      <li>Best-supported method for rice plus a main: <b>simmering basket in the bowl, Varoma above</b>, using a compatible recipe.</li>
+      <li>Basket limit: <b>350 g rice max</b>, 1.4 L basket volume, never above the max mark. This limit applies to the basket only.</li>
+      <li>There is <b>no universal water ratio or time</b>. Basket, Varoma container and Rice Cooker mode each hydrate rice differently.</li>
+      <li>Keep some Varoma dish and tray slots <b>uncovered</b> so steam can escape.</li>
+      <li>Cooked rice: cool within ~1 hour, refrigerate, eat within 24 h, reheat once, steaming hot throughout.</li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section id="limits">
+  <h2>Hard Numbers</h2>
+  <div class="grid">
+    <div class="stat"><b>350 g</b><span>Max dry rice in simmering basket (Vorwerk)</span></div>
+    <div class="stat"><b>1.4 L</b><span>Simmering basket volume</span></div>
+    <div class="stat"><b>1 L mark</b><span>Bowl water in the official Hainanese chicken and rice recipe</span></div>
+    <div class="stat"><b>55 + 15 min</b><span>Chicken stage, then rice stage (same recipe)</span></div>
+    <div class="stat"><b>~71 g</b><span>Uncooked rice per person, Cookidoo Rice Cooker planning figure (2.5 oz)</span></div>
+    <div class="stat"><b>Speed 5</b><span>TM7 max speed in Steaming mode</span></div>
+  </div>
+  <p class="note">Only the jasmine row below has documented settings. Everything marked "Testing required" has no verified figure, so none is invented here.</p>
+</section>
+
+<section id="methods">
+  <h2>Method Comparison</h2>
+  <div class="tools"><input type="search" data-table="t-methods" placeholder="Filter methods..."><span class="count" data-count="t-methods"></span></div>
+  <div class="wrap"><table id="t-methods">
+    <thead><tr><th>Method</th><th>Best for</th><th>Max rice / batch</th><th>Main cooks above?</th><th>Evidence status</th><th>Main drawback</th></tr></thead>
+    <tbody>
+      <tr><td>Simmering basket (Varoma above)</td><td>Rice plus a main</td><td>350 g</td><td>Yes, with suitable loading</td><td><span class="pill doc">Manufacturer recipes</span></td><td>Capacity limit; rice must contact bowl water</td></tr>
+      <tr><td>Varoma tray + heatproof container</td><td>Container-based steaming</td><td>Not established</td><td>Possibly, needs testing</td><td><span class="pill test">Untested</span></td><td>Container size and steam penetration unknown</td></tr>
+      <tr><td>Bundt tin in Varoma</td><td>Moulded rice</td><td>Not established</td><td>Possibly, needs testing</td><td><span class="pill test">Untested</span></td><td>Tin size, rice depth and time vary</td></tr>
+      <tr><td>Basket only (no Varoma)</td><td>Rice alone</td><td>Follow basket and model limits</td><td>No</td><td><span class="pill doc">TM5 documented (white rice)</span></td><td>Settings are not interchangeable between rice types</td></tr>
+      <tr><td>TM6 Rice Cooker mode</td><td>Automated rice in the bowl</td><td>Per Cookidoo recipe</td><td>No</td><td><span class="pill doc">Manufacturer mode</span></td><td>Basket goes on the lid, not the cup; separate process from Varoma</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="rice">
+  <h2>Rice Type Lookup</h2>
+  <div class="tools">
+    <input type="search" data-table="t-rice" placeholder="Filter rice types...">
+    <select data-table="t-rice" data-col="2"><option value="">All textures</option><option>Separate</option><option>Cohesive</option><option>Very sticky</option><option>Chewy</option></select>
+    <span class="count" data-count="t-rice"></span>
+  </div>
+  <div class="wrap"><table id="t-rice">
+    <thead><tr><th>Rice type</th><th>Grain</th><th>Typical texture</th><th>Thermomix setting</th><th>Rinse / soak</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Jasmine</td><td>Long</td><td>Separate</td><td>350 g, basket, bowl water to 1 L mark, 15 min, Varoma / speed 4 (Hainanese recipe, TM5/6/7). Recipe-specific only.</td><td>Rinse until water runs clear (that recipe)</td><td><span class="pill doc">Documented example</span></td></tr>
+      <tr><td>Basmati</td><td>Long</td><td>Separate</td><td>Not established</td><td>Follow recipe</td><td><span class="pill test">Testing required</span></td></tr>
+      <tr><td>Plain long-grain white</td><td>Long</td><td>Separate</td><td>TM5 basket method exists; no universal Varoma setting</td><td>Follow recipe</td><td><span class="pill test">Testing required</span></td></tr>
+      <tr><td>Short-grain white</td><td>Short</td><td>Cohesive</td><td>Not established</td><td>Follow recipe</td><td><span class="pill test">Testing required</span></td></tr>
+      <tr><td>Glutinous / sticky</td><td>Short</td><td>Very sticky</td><td>Needs variety-specific method; not established</td><td>Follow recipe</td><td><span class="pill test">Testing required</span></td></tr>
+      <tr><td>Brown</td><td>Varies</td><td>Chewy</td><td>Not established; slower than white</td><td>May need soaking (Cookidoo)</td><td><span class="pill test">Testing required</span></td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Texture column reflects general grain behaviour: long-grain cooks separate, short-grain is cohesive, glutinous is very sticky, brown is chewier and slower. Rinsing is recipe-specific; a food-science study found no large effect of washing on hardness or stickiness.</p>
+</section>
+
+<section id="models">
+  <h2>Model Differences (TM5 / TM6 / TM7)</h2>
+  <div class="tools"><input type="search" data-table="t-models" placeholder="Filter models..."></div>
+  <div class="wrap"><table id="t-models">
+    <thead><tr><th>Model</th><th>Varoma / steaming control</th><th>Rice features</th><th>Watch out for</th></tr></thead>
+    <tbody>
+      <tr><td>TM5</td><td>Varoma temperature setting</td><td>Documented simmering-basket rice methods</td><td>Use TM5-specific instructions</td></tr>
+      <tr><td>TM6</td><td>Varoma temperature setting</td><td>Rice Cooker mode (auto time/temp, basket on lid)</td><td>Not the same as basket-in-bowl with Varoma above</td></tr>
+      <tr><td>TM7</td><td>Steaming mode gives Varoma temperature</td><td>Rice Cooker recipes via Cookidoo</td><td>Max speed 5 in Steaming mode; Varoma is a steaming function, not a number above 120&deg;C</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="pairing">
+  <h2>Rice + Main Dish Planner</h2>
+  <div class="tools"><input type="search" data-table="t-pair" placeholder="Filter mains..."></div>
+  <div class="wrap"><table id="t-pair">
+    <thead><tr><th>Main</th><th>Size / weight</th><th>Position</th><th>Rice method</th><th>Schedule</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Whole chicken</td><td>~1.7 kg</td><td>Varoma dish, raised on chopsticks</td><td>350 g jasmine in basket</td><td>55 min chicken stage, then 15 min rice stage</td><td><span class="pill doc">Official recipe</span></td></tr>
+      <tr><td>Chicken pieces</td><td>Test-specific</td><td>Varoma dish or tray</td><td>Simmering basket</td><td>Needs testing; do not reuse whole-chicken times</td><td><span class="pill test">Testing required</span></td></tr>
+      <tr><td>Fish</td><td>Test-specific</td><td>Varoma tray or dish</td><td>Simmering basket</td><td>Needs testing; thickness matters</td><td><span class="pill test">Testing required</span></td></tr>
+      <tr><td>Mixed vegetables</td><td>Test-specific</td><td>Varoma tray</td><td>Simmering basket</td><td>Needs testing; cut size matters</td><td><span class="pill test">Testing required</span></td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">The chicken steams first; the rice stage is not a universal time for raw chicken and rice started together.</p>
+</section>
+
+<section id="fixes">
+  <h2>Troubleshooting Finder</h2>
+  <div class="tools"><input type="search" data-table="t-fix" placeholder="Search symptom or cause (e.g. mushy, steam)..."><span class="count" data-count="t-fix"></span></div>
+  <div class="wrap"><table id="t-fix">
+    <thead><tr><th>Symptom</th><th>Likely cause</th><th>Quick fix</th><th>Prevention</th></tr></thead>
+    <tbody>
+      <tr><td>Mushy / soggy</td><td>Excess liquid, overcooking, naturally sticky variety</td><td>Drain free liquid, fluff gently. Broken grains can't be restored.</td><td>Match recipe to rice type and quantity</td></tr>
+      <tr><td>Hard centres</td><td>Too little water contact, inadequate steaming or time</td><td>Check water level; continue only as the method allows</td><td>Measure rice and liquid accurately</td></tr>
+      <tr><td>Clumped / sticky</td><td>Variety, hydration, surface starch, over-handling</td><td>Loosen grains gently without crushing</td><td>Pick a suitable variety; follow its recipe</td></tr>
+      <tr><td>Uneven top vs bottom</td><td>Uneven depth or blocked steam</td><td>Redistribute rice where the method permits</td><td>Avoid overloading; keep steam paths open</td></tr>
+      <tr><td>Burnt / stuck on bottom</td><td>Direct-in-bowl cooking with wrong liquid or settings</td><td>Stop programme, inspect bowl; don't scrape burnt bits into rice</td><td>Follow the exact Rice Cooker recipe liquid</td></tr>
+      <tr><td>Dry / crunchy edges</td><td>Low hydration or uneven steam</td><td>Check whether the method needs more liquid or steaming</td><td>Suitable container, even depth, matching recipe</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="storage">
+  <h2>Cooked Rice Storage Timeline</h2>
+  <div class="tools"><input type="search" data-table="t-store" placeholder="Filter stages..."></div>
+  <div class="wrap"><table id="t-store">
+    <thead><tr><th>Stage</th><th>Rule</th><th>Limit</th></tr></thead>
+    <tbody>
+      <tr><td>1. Right after cooking</td><td>Move rice out of hot cooking equipment</td><td>Immediately</td></tr>
+      <tr><td>2. Cooling</td><td>Spread into small portions to cool fast</td><td>Ideally within 1 hour</td></tr>
+      <tr><td>3. Refrigerate</td><td>Chill promptly</td><td>Eat within 24 hours</td></tr>
+      <tr><td>4. Reheat</td><td>Reheat once only, steaming hot throughout</td><td>1 time</td></tr>
+      <tr><td>5. Freezing</td><td>Cool rapidly and freeze promptly if not eating within 24 h</td><td>Freeze fast</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Rule source: UK Food Standards Agency guidance as summarised in the guide. Uncooked rice can carry Bacillus cereus spores that survive cooking. No universal Thermomix reheating time is established.</p>
+</section>
+
+<section id="faq">
+  <h2>FAQ</h2>
+  <div class="tools"><input type="search" data-table="t-faq" placeholder="Search FAQ..."></div>
+  <div class="wrap"><table id="t-faq">
+    <thead><tr><th>Question</th><th>Short answer</th></tr></thead>
+    <tbody>
+      <tr><td>Can I steam rice and a main together?</td><td>Yes. Rice in the basket, main in the Varoma, with steam slots left open.</td></tr>
+      <tr><td>How much rice at once?</td><td>350 g max in the basket. Other containers need their own validated limit.</td></tr>
+      <tr><td>Do I have to rinse?</td><td>Only when your recipe says so. Rinsing alone won't guarantee non-clumpy rice.</td></tr>
+      <tr><td>What is Varoma?</td><td>The steaming function. On TM7, choose Steaming mode.</td></tr>
+      <tr><td>Does TM7 Steaming mode change rice settings?</td><td>It changes how you select Varoma, not the water ratio or time.</td></tr>
+      <tr><td>Can I reuse the 350 g limit for a bundt tin?</td><td>No. It applies to the simmering basket only.</td></tr>
+      <tr><td>Is there a no-Varoma option?</td><td>Yes: TM5 basket method for plain white rice, and TM6 Rice Cooker mode.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+</main>
+
+<footer>
+  <p>Data compiled from and expanded on this guide: <a href="https://kitchenmemo.com/thermomix-rice-varoma/">Thermomix rice in the Varoma: water ratios, times and fixes</a>.</p>
+  <p>Independent reference sheet. Not affiliated with Vorwerk. Always follow your machine's manual and a model-compatible recipe.</p>
+</footer>
+
+<script>
+(function(){
+  function cellText(r,i){return (r.cells[i]||{}).textContent.trim().toLowerCase()}
+  document.querySelectorAll("table").forEach(function(t){
+    var heads=t.tHead.rows[0].cells;
+    Array.prototype.forEach.call(heads,function(th,i){
+      th.addEventListener("click",function(){
+        var dir=th.classList.contains("asc")?"desc":"asc";
+        Array.prototype.forEach.call(heads,function(h){h.classList.remove("asc","desc")});
+        th.classList.add(dir);
+        var rows=Array.prototype.slice.call(t.tBodies[0].rows);
+        rows.sort(function(a,b){
+          var x=cellText(a,i),y=cellText(b,i),nx=parseFloat(x),ny=parseFloat(y);
+          var c=(!isNaN(nx)&&!isNaN(ny))?nx-ny:x.localeCompare(y);
+          return dir==="asc"?c:-c;
+        });
+        rows.forEach(function(r){t.tBodies[0].appendChild(r)});
+      });
+    });
+  });
+  function apply(id){
+    var t=document.getElementById(id),q=document.querySelector('input[data-table="'+id+'"]'),
+        s=document.querySelector('select[data-table="'+id+'"]'),n=document.querySelector('[data-count="'+id+'"]'),shown=0;
+    Array.prototype.forEach.call(t.tBodies[0].rows,function(r){
+      var ok=(!q||r.textContent.toLowerCase().indexOf(q.value.toLowerCase())>-1);
+      if(ok&&s&&s.value)ok=cellText(r,+s.dataset.col)===s.value.toLowerCase();
+      r.style.display=ok?"":"none";if(ok)shown++;
+    });
+    if(n)n.textContent=shown+" of "+t.tBodies[0].rows.length+" shown";
+  }
+  document.querySelectorAll("[data-table]").forEach(function(el){
+    var id=el.dataset.table;el.addEventListener("input",function(){apply(id)});el.addEventListener("change",function(){apply(id)});apply(id);
+  });
+})();
+</script>
+</body>
+</html>
